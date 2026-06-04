@@ -1,58 +1,83 @@
-# shortify
-URL shortening service with custom short links and click tracking built using Django.
+# 🚀 Shortify
 
-Shortify 🔗
+> A lightweight URL shortener built with Django
 
-A simple URL shortener built with Django.
+---
 
-🚀 Features
-Shorten long URLs into compact links
-Redirect short links to original URLs
-Simple and clean UI using Django templates
-🛠 Tech Stack
-Django (Backend + Templates)
-SQLite (default database)
-📦 Installation
+## 📌 Overview
 
-Clone the repository:
+Shortify is a minimal web application that converts long URLs into short, shareable links and redirects users to the original destination.
+Built with Django using a simple and clean architecture.
 
-git clone https://github.com/your-username/shortify.git
+---
+
+## ✨ Features
+
+* 🔗 Create short URLs from long links
+* ↪️ Instant redirection to original URLs
+* 🧩 Simple Django template-based UI
+* ⚡ Lightweight and fast
+
+---
+
+## 🧰 Tech Stack
+
+* Python
+* Django
+* SQLite
+* Django Templates
+
+---
+
+## 📁 Project Structure
+
+shortify/
+├── core/
+├── shortify/
+├── db.sqlite3
+└── manage.py
+
+---
+
+## ⚙️ Setup & Installation
+
+### 1. Clone the repository
+
+git clone [https://github.com/your-username/shortify.git](https://github.com/your-username/shortify.git)
 cd shortify
 
-Create virtual environment:
+### 2. Create virtual environment
 
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate   (Windows: venv\Scripts\activate)
 
-Install dependencies:
+### 3. Install dependencies
 
 pip install django
 
-Run migrations:
+### 4. Apply migrations
 
 python manage.py migrate
 
-Start development server:
+### 5. Run the server
 
 python manage.py runserver
-🌐 Usage
 
-Open your browser and go to:
+---
 
-http://127.0.0.1:8000/
-Paste a long URL
-Get your shortened link
-Use it and get redirected automatically
-📁 Project Structure
-shortify/
-├── core/              # Main app
-├── shortify/          # Project settings
-├── db.sqlite3
-└── manage.py
-📌 Notes
-This project uses only Django (no external packages)
-Built with Django templates (no frontend framework)
-Designed for learning and simplicity
-📄 License
+## 🌐 Usage
 
-This project is open-source and free to use.
+Open in browser:
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+Then:
+
+* Paste a long URL
+* Generate a short link
+* Share it
+
+---
+
+## 📄 License
+
+MIT License — free to use
