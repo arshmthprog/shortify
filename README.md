@@ -1,83 +1,109 @@
-# 🚀 Shortify
+<div align="center">
 
-> A lightweight URL shortener built with Django
+```
+███████╗██╗  ██╗ ██████╗ ██████╗ ████████╗██╗███████╗██╗   ██╗
+██╔════╝██║  ██║██╔═══██╗██╔══██╗╚══██╔══╝██║██╔════╝╚██╗ ██╔╝
+███████╗███████║██║   ██║██████╔╝   ██║   ██║█████╗   ╚████╔╝ 
+╚════██║██╔══██║██║   ██║██╔══██╗   ██║   ██║██╔══╝    ╚██╔╝  
+███████║██║  ██║╚██████╔╝██║  ██║   ██║   ██║██║        ██║   
+╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝╚═╝        ╚═╝  
+```
 
----
+**Long links die here.**
 
-## 📌 Overview
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-4.x-092E20?style=flat-square&logo=django&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-22c55e?style=flat-square)
 
-Shortify is a minimal web application that converts long URLs into short, shareable links and redirects users to the original destination.
-Built with Django using a simple and clean architecture.
-
----
-
-## ✨ Features
-
-* 🔗 Create short URLs from long links
-* ↪️ Instant redirection to original URLs
-* 🧩 Simple Django template-based UI
-* ⚡ Lightweight and fast
-
----
-
-## 🧰 Tech Stack
-
-* Python
-* Django
-* SQLite
-* Django Templates
+</div>
 
 ---
 
-## 📁 Project Structure
+## What is this?
 
+Shortify takes your ugly, bloated URLs and turns them into something people actually want to click.  
+No accounts. No tracking pixels. No bullshit — just paste, shorten, share.
+
+Built on Django with zero unnecessary dependencies.
+
+---
+
+## Features
+
+| | |
+|---|---|
+| 🔗 **URL Shortening** | Converts any long URL into a clean short link |
+| ⚡ **Instant Redirect** | Sub-millisecond lookups, straight to the destination |
+| 🧩 **Template UI** | Server-rendered — no JS framework overhead |
+| 🪶 **Lightweight** | Single Django app, SQLite, done |
+
+---
+
+## Stack
+
+```
+Backend    →  Python 3.11 + Django 4.x
+Database   →  SQLite (zero config)
+Frontend   →  Django Templates (HTMl/CSS only)
+```
+
+---
+
+## Project Structure
+
+```
 shortify/
-├── core/
-├── shortify/
-├── db.sqlite3
-└── manage.py
+├── core/               # URL logic, models, views
+│   ├── models.py       # ShortURL model
+│   ├── views.py        # Create + redirect views
+│   └── urls.py
+├── shortify/           # Project config
+│   ├── settings.py
+│   └── urls.py
+├── manage.py
+└── db.sqlite3
+```
 
 ---
 
-## ⚙️ Setup & Installation
+## Get It Running
 
-### 1. Clone the repository
-
-git clone [https://github.com/your-username/shortify.git](https://github.com/your-username/shortify.git)
+```bash
+# 1. Clone
+git clone https://github.com/your-username/shortify.git
 cd shortify
 
-### 2. Create virtual environment
-
+# 2. Virtual environment
 python -m venv venv
-source venv/bin/activate   (Windows: venv\Scripts\activate)
+source venv/bin/activate        # Windows: venv\Scripts\activate
 
-### 3. Install dependencies
-
+# 3. Dependencies
 pip install django
 
-### 4. Apply migrations
-
+# 4. Database
 python manage.py migrate
 
-### 5. Run the server
-
+# 5. Launch
 python manage.py runserver
+```
+
+Open `http://127.0.0.1:8000/` — you're live.
 
 ---
 
-## 🌐 Usage
+## How It Works
 
-Open in browser:
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+```
+User pastes URL  →  Django generates slug  →  Stored in DB
+                                                    ↓
+User visits short link  →  Django looks up slug  →  301 Redirect
+```
 
-Then:
-
-* Paste a long URL
-* Generate a short link
-* Share it
+That's it. No magic.
 
 ---
 
-## 📄 License
+## License
 
-MIT License — free to use
+MIT — take it, fork it, ship it.
