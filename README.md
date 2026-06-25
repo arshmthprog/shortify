@@ -23,9 +23,7 @@
 ## What is this?
 
 Shortify takes your ugly, bloated URLs and turns them into something people actually want to click.  
-No accounts. No tracking pixels. No bullshit — just paste, shorten, share.
-
-Built on Django with zero unnecessary dependencies.
+Pure backend logic — no frontend framework, no JS overhead, just Django doing its job.
 
 ---
 
@@ -34,9 +32,9 @@ Built on Django with zero unnecessary dependencies.
 | | |
 |---|---|
 | 🔗 **URL Shortening** | Converts any long URL into a clean short link |
-| ⚡ **Instant Redirect** | Sub-millisecond lookups, straight to the destination |
-| 🧩 **Template UI** | Server-rendered — no JS framework overhead |
-| 🪶 **Lightweight** | Single Django app, SQLite, done |
+| ⚡ **Instant Redirect** | Fast lookups, straight to the destination |
+| 🧩 **Template UI** | Server-rendered with Django Templates |
+| 🪶 **Lightweight** | Single Django app, SQLite, zero bloat |
 
 ---
 
@@ -44,8 +42,8 @@ Built on Django with zero unnecessary dependencies.
 
 ```
 Backend    →  Python 3.11 + Django 4.x
-Database   →  SQLite (zero config)
-Frontend   →  Django Templates (HTMl/CSS only)
+Database   →  SQLite
+Templating →  Django Templates
 ```
 
 ---
@@ -71,7 +69,7 @@ shortify/
 
 ```bash
 # 1. Clone
-git clone https://github.com/your-username/shortify.git
+git clone https://github.com/arshmthprog/shortify.git
 cd shortify
 
 # 2. Virtual environment
@@ -99,8 +97,6 @@ User pastes URL  →  Django generates slug  →  Stored in DB
                                                     ↓
 User visits short link  →  Django looks up slug  →  301 Redirect
 ```
-
-That's it. No magic.
 
 ---
 
